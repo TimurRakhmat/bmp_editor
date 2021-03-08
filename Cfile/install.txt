@@ -1,0 +1,12 @@
+gcc -c bmp_header.c -o bmp_header.o
+gcc -c pixels.c -o pixels.o
+gcc -c info.c -o info.o
+gcc -c filter_commander.c -o filter_commander.o
+gcc -c change_scale.c -o change_scale.o
+gcc -c change_format.c -o change_format.o
+gcc -c main.c -o main.o
+gcc main.o change_format.o change_scale.o filter_commander.o info.o pixels.o bmp_header.o -o editor.exe
+
+del main.o change_format.o change_scale.o filter_commander.o info.o pixels.o bmp_header.o
+cls
+echo editor.exe installed
